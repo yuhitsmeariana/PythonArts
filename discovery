@@ -1,0 +1,172 @@
+from turtle import *
+
+Screen().tracer(100)
+
+bgcolor('orange')
+
+#Sun
+penup()
+goto(750,350)
+pendown()
+begin_fill()
+color('darkorange')
+circle(50)
+end_fill()
+
+penup()
+goto(600,200)
+pendown()
+begin_fill()
+color('darkorange')
+circle(100)
+end_fill()
+
+penup()
+goto(325,-100)
+pendown()
+begin_fill()
+color('darkorange')
+circle(200)
+end_fill()
+
+#grass
+penup()
+goto(-1000,-675)
+pendown()
+color('royalblue')
+begin_fill()
+for i in range(2):
+    fd(1920)
+    lt(90)
+    fd(200)
+    lt(90)
+end_fill()
+
+#water
+penup()
+goto(-1000,-675)
+pendown()
+color('forestgreen')
+begin_fill()
+for i in range(2):
+    fd(1320)
+    lt(90)
+    fd(200)
+    lt(90)
+end_fill()
+
+#mountain
+penup()
+goto(-1200,-475)
+pendown()
+color('dimgray')
+begin_fill()
+for i in range(3):
+    fd(700)
+    lt(360/3)
+end_fill()
+
+penup()
+goto(-700,-475)
+pendown()
+color('gray')
+begin_fill()
+for i in range(3):
+    fd(650)
+    lt(360/3)
+end_fill()
+
+penup()
+goto(-900,-475)
+pendown()
+color('darkgray')
+begin_fill()
+for i in range(3):
+    fd(600)
+    lt(360/3)
+end_fill()
+
+#Trees
+def tree():
+    color('saddlebrown')
+    begin_fill()
+    for i in range(2):
+        fd(40)
+        lt(90)
+        fd(10)
+        lt(90)
+    end_fill()
+
+    fd(10)
+    lt(90)
+    fd(5)
+
+    color('forestgreen')
+    begin_fill()
+    circle(25)
+    end_fill()
+    
+    right(90)
+rt(90)
+
+import random
+for i in range(100):
+    pu()
+    goto(random.randint(-950,300),-435)
+    pd()
+    tree()
+
+#boat
+lt(90)
+width(10)
+pu()
+goto(500,-470)
+pd()
+color('brown')
+begin_fill()
+fd(100)
+lt(75)
+fd(25)
+lt(180-75)
+fd(115)
+lt(180-75)
+fd(25)
+lt(90-15)
+fd(115/2)
+pu()
+lt(90)
+fd(25)
+pd()
+end_fill()
+#Hooman=Seng
+color('peachpuff')
+pu()
+lt(90)
+fd(25)
+rt(90)
+fd(7)
+pd()
+fd(12)
+circle(4)
+pu()
+fd(-12)
+(-7)
+rt(-90)
+fd(-25)
+lt(-90)
+pd()
+color('brown')
+fd(25)
+color('white')
+begin_fill()
+fd(75)
+fd(-75)
+rt(90)
+fd(50)
+lt(120)
+fd(90)
+end_fill()
+
+Screen().update()
+done()
+hideturtle()
